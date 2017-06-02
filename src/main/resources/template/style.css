@@ -1,0 +1,56 @@
+table, th, td {
+    font-family: Arial,Helvetica,sans-serif;
+    border-collapse: collapse;
+    border: 1px solid #dddddd;
+    font-size:12px;
+    width: 100%;
+    color: #FFFFFF;
+}
+
+td, th {
+    padding: 4px;
+    text-align: center;
+}
+
+th {
+	background-color: #8064a2;
+}
+
+td.success {
+	background-color: #009900;
+}
+
+td.error {
+	background-color: #cc0000;
+	font-weight: bold;
+}
+
+td.warning {
+	background-color: #f48c42;
+}
+
+td.benchmarkColumn {
+	background-color: #e46d0a;	
+}
+
+td.mailerData {
+	background-color: #538ed5;	
+}
+
+p {
+	font-family: Arial,Helvetica,sans-serif;
+	font-size:14px;
+	color : #000000;
+}
+
+p.error {
+	color: #FF0000;
+}
+
+.italic {
+	font-style: italic;
+}
+
+.bold {
+	font-weight: bold;	
+}

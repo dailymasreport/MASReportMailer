@@ -17,6 +17,7 @@ import utils.HTMLGenerator;
 import utils.MailSender;
 import utils.SMSSender;
 
+@SuppressWarnings("unused")
 public class Runner {
 	
 	public static void main(String[] args) throws MessagingException, IOException, DocumentException, SQLException, TemplateException, ParseException {

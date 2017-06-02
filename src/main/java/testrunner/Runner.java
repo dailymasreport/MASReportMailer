@@ -10,7 +10,6 @@ import javax.mail.MessagingException;
 
 import org.dom4j.DocumentException;
 
-import Configuration.SupportLib;
 import freemarker.template.TemplateException;
 import testData.MailData;
 import utils.ExtractMailData;
@@ -31,7 +30,7 @@ public class Runner {
 		
 		MailSender mailSender = new MailSender();
 		
-		SMSSender smsSender = new SMSSender();
+		//SMSSender smsSender = new SMSSender();
 		
 		for(String subject : mailDataMap.keySet()){
 			List<MailData> mailData = mailDataMap.get(subject);
@@ -40,11 +39,11 @@ public class Runner {
 			
 			mailSender.sendMail(subject, html);
 			
-			String smsContent = smsSender.smsTextCreator(mailData);
-			if(smsContent.contains("1")){
-				smsContent = "Report till " + time + "\n" + smsContent;
-			}
-			System.out.println(smsContent);
+//			String smsContent = smsSender.smsTextCreator(mailData);
+//			if(smsContent.contains("1")){
+//				smsContent = "Report till " + time + "\n" + smsContent;
+//			}
+//			System.out.println(smsContent);
 		}
 	}
 	

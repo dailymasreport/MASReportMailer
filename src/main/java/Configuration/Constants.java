@@ -6,7 +6,7 @@ public class Constants {
 	public static String password = "times1234";
 	
 	public static String toList = "sahil.goyal@yopmail.com";
-	public static String ccList = "";
+	public static String ccList = "sahil@yopmail.com";
 
 	// DB connection details;
 	public static String DBIP = "localhost";

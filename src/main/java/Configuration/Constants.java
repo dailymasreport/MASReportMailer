@@ -10,10 +10,10 @@ public class Constants {
 
 	// DB connection details;
 	public static String DBIP = "localhost";
-	public static String DBPort = "7000";
+	public static String DBPort = "3306";
 	public static String DBDatabaseName = "masalertData";
 	public static String DBUserName = "root";
-	public static String DBPassword = "sahil";	
+	public static String DBPassword = "mbqc";	
 	public static String DBTableName = "masData";
 	public static String mailSentCol = "mailsent";
 	public static String openRateCol = "openrate";

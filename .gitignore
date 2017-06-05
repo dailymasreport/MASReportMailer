@@ -1,3 +1,4 @@
 /target/
 
 /test.bat
+/src/main/java/Configuration/Constants.java

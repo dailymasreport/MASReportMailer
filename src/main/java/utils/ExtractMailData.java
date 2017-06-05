@@ -27,9 +27,9 @@ public class ExtractMailData {
 	public static HashMap<String, MailData> mailObjectMap = null;
 
 	public static String time = "";
-	
+
 	public HashMap<String, List<MailData>> mailDataMap = new HashMap<>();
-	
+
 	private List<Document> getDocFromMail() throws IOException, DocumentException{
 		String subject = "";
 
@@ -82,14 +82,17 @@ public class ExtractMailData {
 				String subject = doc.getRootElement().attributeValue("subject");
 				time = subject.substring(subject.lastIndexOf("at") + 3, subject.length());
 				date = SupportLib.getDate(doc.getRootElement().attributeValue("date"));
-				mailObjectMap = FetchDBData.fetchData(date, time);
+
+				String DBTime = SupportLib.getDBTime(time);
+
+				mailObjectMap = FetchDBData.fetchData(date, DBTime);
 
 				for(String mailer : Constants.mailerList){
-						xpath = "//td[descendant::*[text()='" + mailer + "']]/following-sibling::*[1]/*";				
+					xpath = "//td[descendant::*[text()='" + mailer + "']]/following-sibling::*[1]/*";				
 					mailsSent = doc.selectSingleNode(xpath).getText();
 					xpath = "//td[descendant::*[text()='" + mailer + "']]/following-sibling::*[2]/*";
 					openRate = doc.selectSingleNode(xpath).getText();
-					db.executeUpdate(Constants.insertMailerData_query, date, time, mailer, mailsSent, openRate);
+					db.executeUpdate(Constants.insertMailerData_query, date, DBTime, mailer, mailsSent, openRate);
 					mailObjectMap.get(mailer).setMailsSent(Double.parseDouble(mailsSent));
 					mailObjectMap.get(mailer).setOpenRate(Double.parseDouble(openRate));
 
@@ -111,8 +114,8 @@ public class ExtractMailData {
 			}
 			db.CloseDB();
 		}
-		
+
 		return mailDataMap;
-		
+
 	}
 }

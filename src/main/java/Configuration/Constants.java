@@ -5,8 +5,8 @@ public class Constants {
 	public static String userID = "dailymasreport";
 	public static String password = "times1234";
 	
-	public static String toList = "sahil.goyal@yopmail.com";
-	public static String ccList = "sahil@yopmail.com";
+	public static String toList = "shivesh.verma@timesgroup.com;pushkar.saxena@timesgroup.com;puneet.kukreja@timesgroup.com;amit.khanna1@timesgroup.com;Pankaj.Sharma2@timesgroup.com;Tanmay.Gupta@timesgroup.com;nupur.rustgi@timesgroup.com;Ankur.Tyagi@timesgroup.com;shaurya.sahay@timesgroup.com;Roushan.Singh@timesgroup.com;Ashish.Dixit@timesgroup.com;sahil.goyal@timesgroup.com";
+	public static String ccList = "Subodh.Kumar2@timesgroup.com";
 
 	// DB connection details;
 	public static String DBIP = "localhost";

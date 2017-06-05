@@ -6,7 +6,6 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.time.LocalTime;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.util.Date;
@@ -50,26 +49,26 @@ public class SupportLib {
 
 
 	}
+	
+	public static String getDBTime(String mailTime){
+		
 
-	public static String getMailTime(){
-		String mailTime = "";
-
-		if(LocalTime.now().getHour() >= 9 && LocalTime.now().getHour() < 12){
+		if(mailTime.contains("9 AM") || mailTime.contains("10 AM") || mailTime.contains("11 AM")){
 			mailTime = "9 AM";
 		}
-		else if(LocalTime.now().getHour() >= 12 && LocalTime.now().getHour() < 15){
+		else if(mailTime.contains("12 PM") || mailTime.contains("1 PM") || mailTime.contains("2 PM")){
 			mailTime = "12 PM";
 		}
-		else if(LocalTime.now().getHour() >= 15 && LocalTime.now().getHour() < 18){
+		else if(mailTime.contains("3 PM") || mailTime.contains("4 PM") || mailTime.contains("5 PM")){
 			mailTime = "3 PM";
 		}
-		else if(LocalTime.now().getHour() >= 18 && LocalTime.now().getHour() < 21){
+		else if(mailTime.contains("6 PM") || mailTime.contains("7 PM") || mailTime.contains("8 PM")){
 			mailTime = "6 PM";
 		}
-		else if(LocalTime.now().getHour() >= 21 && LocalTime.now().getHour() < 24){
+		else if(mailTime.contains("9 PM") || mailTime.contains("10 PM")){
 			mailTime = "9 PM";
 		}
-		else if(LocalTime.now().getHour() > 23 && LocalTime.now().getHour() < 24){
+		else if(mailTime.contains("11 PM") || mailTime.contains("12 AM")){
 			mailTime = "11 PM";
 		}
 		return mailTime;

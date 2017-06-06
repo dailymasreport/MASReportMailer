@@ -5,8 +5,15 @@ public class Constants {
 	public static String userID = "dailymasreport";
 	public static String password = "times1234";
 	
-	public static String toList = "shivesh.verma@timesgroup.com;pushkar.saxena@timesgroup.com;puneet.kukreja@timesgroup.com;amit.khanna1@timesgroup.com;Pankaj.Sharma2@timesgroup.com;Tanmay.Gupta@timesgroup.com;nupur.rustgi@timesgroup.com;Ankur.Tyagi@timesgroup.com;shaurya.sahay@timesgroup.com;Roushan.Singh@timesgroup.com;Ashish.Dixit@timesgroup.com;sahil.goyal@timesgroup.com";
-	public static String ccList = "Subodh.Kumar2@timesgroup.com";
+	public static String toListMasReport = "shivesh.verma@timesgroup.com;pushkar.saxena@timesgroup.com;puneet.kukreja@timesgroup.com;amit.khanna1@timesgroup.com;Pankaj.Sharma2@timesgroup.com;Tanmay.Gupta@timesgroup.com;nupur.rustgi@timesgroup.com;Ankur.Tyagi@timesgroup.com;shaurya.sahay@timesgroup.com;Roushan.Singh@timesgroup.com;Ashish.Dixit@timesgroup.com;sahil.goyal@timesgroup.com";
+	public static String ccListMasReport = "Subodh.Kumar2@timesgroup.com";
+	
+	public static String toListError = "sahil.goyal@timesgroup.com";
+	public static String ccListError = "";
+	
+	public static String[] mobileNo = {"9990356888", "8586004630", "9910803272", "9811704908", "9999110981", "7042555622", "9716660353", "9810825251"};
+	public static String errorSMSSubject = "Messages not delivered/sent for the mentioned numbers";
+	
 
 	// DB connection details;
 	public static String DBIP = "localhost";
@@ -20,14 +27,13 @@ public class Constants {
 	public static String mailerNameCol = "mailer";
 	public static String timeCol = "time";
 	public static String dateCol = "date";
+	
+	
 	public static String[] mailerList = {"PRS", "PRS Instant","RENTAL", "PSM_0To6", "PSM_6To12"};
-
-	public static double preWeeksCount = 1;
 	
 	public static final String USER = "me";
 	public static int loglevel = 1;
 	
-	//public static String query = "is:unread MAS Report from:MAS ";
 	public static String query = "label:inbox is:unread from:info@magicbricks.com MAS Report";
 	
 	public static String setDateValue_query = "Set @date = ?;";

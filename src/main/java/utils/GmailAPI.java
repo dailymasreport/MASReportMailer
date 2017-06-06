@@ -237,8 +237,8 @@ public class GmailAPI {
         List<String> tolist = new ArrayList<String>();
 		List<String> CClist = new ArrayList<String>();
 
-		StringTokenizer todetail = new StringTokenizer(Constants.toList, ";");
-		StringTokenizer ccdetail = new StringTokenizer(Constants.ccList, ";");
+		StringTokenizer todetail = new StringTokenizer(to, ";");
+		StringTokenizer ccdetail = new StringTokenizer(cc, ";");
 		
 		
 		

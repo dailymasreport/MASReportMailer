@@ -5,8 +5,6 @@ import java.io.IOException;
 import javax.mail.MessagingException;
 import javax.mail.internet.MimeMessage;
 
-import Configuration.Constants;
-
 public class MailSender {
 	
 	public GmailAPI gmailApi;
@@ -15,14 +13,9 @@ public class MailSender {
 		this.gmailApi = new GmailAPI();
 	}
 	
-	public void sendMail(String subject, String htmlContent) throws MessagingException, IOException{		
-		String mailStatus = "PASS";
+	public void sendMail(String subject, String htmlContent, String toList, String ccList) throws MessagingException, IOException{
 		
-		if(htmlContent.contains("Observation")){
-			mailStatus = "FAIL";
-		}
-		
-		MimeMessage msg = gmailApi.createEmail(Constants.toList, Constants.ccList, "Analysis of " + subject + " - " + mailStatus, htmlContent);
+		MimeMessage msg = gmailApi.createEmail(toList, ccList, subject, htmlContent);
 		
 		gmailApi.sendMessage(msg);
 		

@@ -10,6 +10,7 @@ import javax.mail.MessagingException;
 
 import org.dom4j.DocumentException;
 
+import Configuration.Constants;
 import freemarker.template.TemplateException;
 import testData.MailData;
 import utils.ExtractMailData;
@@ -17,7 +18,6 @@ import utils.HTMLGenerator;
 import utils.MailSender;
 import utils.SMSSender;
 
-@SuppressWarnings("unused")
 public class Runner {
 	
 	public static void main(String[] args) throws MessagingException, IOException, DocumentException, SQLException, TemplateException, ParseException {
@@ -31,20 +31,26 @@ public class Runner {
 		
 		MailSender mailSender = new MailSender();
 		
-		//SMSSender smsSender = new SMSSender();
+		SMSSender smsSender = new SMSSender();
 		
 		for(String subject : mailDataMap.keySet()){
 			List<MailData> mailData = mailDataMap.get(subject);
 			String time = subject.substring(subject.lastIndexOf("at") + 3, subject.length()); 
 			html = htmlOutput.generateHTMLFromTemplate(mailData, time);
 			
-			mailSender.sendMail(subject, html);
+			String mailStatus = "PASS";
 			
-//			String smsContent = smsSender.smsTextCreator(mailData);
-//			if(smsContent.contains("1")){
-//				smsContent = "Report till " + time + "\n" + smsContent;
-//			}
-//			System.out.println(smsContent);
+			if(html.contains("Observation")){
+				mailStatus = "FAIL";
+			}
+			
+			mailSender.sendMail( "Analysis of " + subject + " - " + mailStatus, html, Constants.toListMasReport, Constants.ccListMasReport);
+			
+			String messageStatus = smsSender.sendMsg(mailData, time, Constants.mobileNo);
+			if(!messageStatus.equalsIgnoreCase("Success")){
+				mailSender.sendMail(Constants.errorSMSSubject, messageStatus, Constants.toListError, Constants.ccListError);
+			}		
+			
 		}
 	}
 	

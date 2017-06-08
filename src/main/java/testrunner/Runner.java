@@ -46,10 +46,10 @@ public class Runner {
 			
 			mailSender.sendMail( "Analysis of " + subject + " - " + mailStatus, html, Constants.toListMasReport, Constants.ccListMasReport);
 			
-			String messageStatus = smsSender.sendMsg(mailData, time, Constants.mobileNo);
-			if(!messageStatus.equalsIgnoreCase("Success")){
-				mailSender.sendMail(Constants.errorSMSSubject, messageStatus, Constants.toListError, Constants.ccListError);
-			}		
+//			String messageStatus = smsSender.sendMsg(mailData, time, Constants.mobileNo);
+//			if(!messageStatus.equalsIgnoreCase("Success")){
+//				mailSender.sendMail(Constants.errorSMSSubject, messageStatus, Constants.toListError, Constants.ccListError);
+//			}		
 			
 		}
 	}

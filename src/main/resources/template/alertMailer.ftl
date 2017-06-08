@@ -72,11 +72,9 @@
 <div>
 [#assign count = 0]
 [#list mailData as data]
-
+	
+		[#if data.mailSentChange?contains('-')]
 		<p class='error'>
-			[#if data.mailerName == 'PRS']
-				PRS process is currently on hold.
-			[#elseif data.mailSentChange?contains('-')]
 			[#assign count = count+1]
 			Observation ${count} - ${data.mailSentChange?replace("-", "")} dip has been observed in <span class='bold'>${data.mailerName}</span> till ${time} with a difference of ${data.mailSentBenchMark - data.mailsSent} lesser mails sent. Additionally, <span class='bold'>Open Rate</span> has
 			[#if data.openRateBenchMark gt data.openRate]
@@ -85,9 +83,8 @@
 				<span class='italic'> increased </span>
 			[/#if]
 			by ${data.openRateChange?replace("-", "")}.
-			[/#if]
 		</p>
-			
+			[/#if]
 			[#if data.mailSentBenchMark == 0 && data.mailsSent gt 0]
 		<p class='error'>
 				[#assign count = count+1]
@@ -114,19 +111,7 @@
 		</tr>
 		[#assign isNA = 0]
 		[#list mailData as data]
-		[#if data.mailerName == 'PRS']
-		<tr>			
-		    <td class="mailerData">${data.mailerName}</td>
-		    <td class="warning">Process on hold</td>
-		     <td class="warning">Process on hold</td>
-		    <td class="warning">Process on hold</td>
-		    <td	class="warning">Process on hold</td>
-		    <td	class="warning">Process on hold</td>
-		    <td class="warning">Process on hold</td>
-		    <td	class="warning">Process on hold</td>
-		    <td	class="warning">Process on hold</td>
-	  	</tr>
-		[#elseif data.mailSentBenchMark == 0 && data.mailsSent == 0]
+		[#if data.mailSentBenchMark == 0 && data.mailsSent == 0]
 		[#assign isNA = 1]
 		<tr>			
 		    <td class="mailerData">${data.mailerName}</td>

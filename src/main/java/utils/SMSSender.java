@@ -20,38 +20,26 @@ public class SMSSender {
 		.append(mailTime).append(":\n");
 		
 		for(MailData mailData : list){
-			if(mailData.getMailerName().equalsIgnoreCase("PRS")){
+			if(mailData.getMailSentChange().contains("-")){
 				if(counter != 0){
 					sb.append("\n");
 				}
 				sb.append(++counter)
 				.append(". ")
 				.append(mailData.getMailerName())
-				.append(" process on hold");
+				.append(" dip by ")
+				.append(mailData.getMailSentChange().replace("-", ""))
+				.append(".");
 			}
-			else{
-				if(mailData.getMailSentChange().contains("-")){
-					if(counter != 0){
-						sb.append("\n");
-					}
-					sb.append(++counter)
-					.append(". ")
-					.append(mailData.getMailerName())
-					.append(" dip by ")
-					.append(mailData.getMailSentChange().replace("-", ""))
-					.append(".");
+			else if(mailData.getMailSentBenchMark() == 0 && mailData.getMailsSent() > 0){
+				if(counter != 0){
+					sb.append("\n");
 				}
-				else if(mailData.getMailSentBenchMark() == 0 && mailData.getMailsSent() > 0){
-					if(counter != 0){
-						sb.append("\n");
-					}
-					sb.append(++counter)
-					.append(". ")
-					.append(mailData.getMailerName())
-					.append(" running overnight.");
-				}
+				sb.append(++counter)
+				.append(". ")
+				.append(mailData.getMailerName())
+				.append(" running overnight.");
 			}
-			
 		}
 		
 

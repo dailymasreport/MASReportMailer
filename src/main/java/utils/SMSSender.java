@@ -15,12 +15,15 @@ public class SMSSender {
 	public String smsTextCreator(List<MailData> list, String mailTime){
 		StringBuilder sb = new StringBuilder();
 		int counter = 0;
+		int issueCount = 0;
+		int passCount = 0;
 		
-		sb.append("Mails Sent Report till " )
-		.append(mailTime).append(":\n");
+		sb.append("Mails Sent Report(" )
+		.append(mailTime).append(")\n");
 		
 		for(MailData mailData : list){
 			if(mailData.getMailSentChange().contains("-")){
+				issueCount++;
 				if(counter != 0){
 					sb.append("\n");
 				}
@@ -28,23 +31,33 @@ public class SMSSender {
 				.append(". ")
 				.append(mailData.getMailerName())
 				.append(" dip by ")
-				.append(mailData.getMailSentChange().replace("-", ""))
-				.append(".");
+				.append(mailData.getMailSentChange().replace("-", ""));
+				
 			}
 			else if(mailData.getMailSentBenchMark() == 0 && mailData.getMailsSent() > 0){
+				issueCount++;
 				if(counter != 0){
 					sb.append("\n");
 				}
 				sb.append(++counter)
 				.append(". ")
 				.append(mailData.getMailerName())
-				.append(" running overnight.");
+				.append(" running overnight");
+			}
+			else if(mailData.getMailSentBenchMark() < mailData.getMailsSent() && mailData.getMailSentBenchMark() != 0 && mailData.getMailsSent() != 0){
+				passCount++;
+				if(counter != 0){
+					sb.append("\n");
+				}
+				sb.append(++counter)
+				.append(". ")
+				.append(mailData.getMailerName())
+				.append(" running fine");
 			}
 		}
 		
-
-		if(!sb.toString().contains("1.")){
-			sb.append("No issues observed in the mailers");
+		if(!(issueCount > 0) && passCount == 5){
+			return ("Mail Sent Report(" + mailTime + ")\nNo issues observed in the mailers.");
 		}
 		return sb.toString();
 		

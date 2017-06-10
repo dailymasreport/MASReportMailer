@@ -5,7 +5,7 @@ public class Constants {
 	public static String userID = "dailymasreport";
 	public static String password = "times1234";
 	
-	public static String toListMasReport = "shivesh.verma@timesgroup.com;pushkar.saxena@timesgroup.com;puneet.kukreja@timesgroup.com;amit.khanna1@timesgroup.com;Pankaj.Sharma2@timesgroup.com;Tanmay.Gupta@timesgroup.com;nupur.rustgi@timesgroup.com;Ankur.Tyagi@timesgroup.com;shaurya.sahay@timesgroup.com;Roushan.Singh@timesgroup.com;Ashish.Dixit@timesgroup.com;sahil.goyal@timesgroup.com;shailesh.mishra@timesgroup.com";
+	public static String toListMasReport = "shivesh.verma@timesgroup.com;pushkar.saxena@timesgroup.com;puneet.kukreja@timesgroup.com;amit.khanna1@timesgroup.com;Pankaj.Sharma2@timesgroup.com;Tanmay.Gupta@timesgroup.com;nupur.rustgi@timesgroup.com;Ankur.Tyagi@timesgroup.com;shaurya.sahay@timesgroup.com;Roushan.Singh@timesgroup.com;Ashish.Dixit@timesgroup.com;sahil.goyal@timesgroup.com;shailesh.mishra@timesgroup.com;Dinesh.Rajput@timesgroup.com";
 	public static String ccListMasReport = "Subodh.Kumar2@timesgroup.com";
 	
 	public static String toListError = "sahil.goyal@timesgroup.com";

@@ -56,9 +56,9 @@ public class SMSSender {
 			}
 		}
 		
-		if(!(issueCount > 0) && passCount == 5){
-			return ("Mail Sent Report(" + mailTime + ")\nNo issues observed in the mailers.");
-		}
+// 		if(!(issueCount > 0) && passCount == 5){
+// 			return ("Mail Sent Report(" + mailTime + ")\nNo issues observed in the mailers.");
+// 		}
 		return sb.toString();
 		
 	}

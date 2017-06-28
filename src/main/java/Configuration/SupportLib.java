@@ -8,6 +8,7 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
 
@@ -89,5 +90,10 @@ public class SupportLib {
 		String result = String.format("%.2f", diff);
 
 		return result + "%";
+	}
+	
+	public static String getCurrentDay(){
+		String weekday_name = new SimpleDateFormat("EEEE", Locale.ENGLISH).format(System.currentTimeMillis());
+		return weekday_name;
 	}
 }

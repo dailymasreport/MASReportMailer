@@ -92,6 +92,11 @@ public class ExtractMailData {
 					mailsSent = doc.selectSingleNode(xpath).getText();
 					xpath = "//td[descendant::*[text()='" + mailer + "']]/following-sibling::*[2]/*";
 					openRate = doc.selectSingleNode(xpath).getText();
+					
+					if(mailer.equalsIgnoreCase("Rental") && DBTime.equalsIgnoreCase("9 AM") && SupportLib.getCurrentDay().equalsIgnoreCase("Wednesday")){
+						mailsSent = "0";
+						openRate = "0";
+					}
 					db.executeUpdate(Constants.insertMailerData_query, date, DBTime, mailer, mailsSent, openRate);
 					mailObjectMap.get(mailer).setMailsSent(Double.parseDouble(mailsSent));
 					mailObjectMap.get(mailer).setOpenRate(Double.parseDouble(openRate));

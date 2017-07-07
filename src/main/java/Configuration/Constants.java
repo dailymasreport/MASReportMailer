@@ -11,7 +11,7 @@ public class Constants {
 	public static String toListError = "sahil.goyal@timesgroup.com";
 	public static String ccListError = "";
 	
-	public static String[] mobileNo = {"8979921514","9810602560","9999110891","9990356888", "8586004630", "9910803272", "9811704908", "9716660353", "9810825251", "9312399613", "9582486434", "8447763798"};
+	public static String[] mobileNo = {"8979921514","9810602560","9999110891","9990356888", "9910803272", "9811704908", "9716660353", "9810825251", "9312399613", "9582486434", "8447763798"};
 	public static String errorSMSSubject = "Messages not delivered/sent for the mentioned numbers";
 	
 

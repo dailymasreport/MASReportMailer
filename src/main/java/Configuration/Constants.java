@@ -42,7 +42,7 @@ public class Constants {
 	public static String average_query = "SELECT mailer, avg(MAILSENT) as " + mailSentCol +" , avg(OPENRATE) as " + openRateCol  +
 									" FROM " + DBTableName +
 									" WHERE time=? and date" +
-									" BETWEEN DATE_SUB(STR_TO_DATE(@date, '%Y-%m-%d') - INTERVAL 7 DAY, INTERVAL 4 WEEK) AND STR_TO_DATE(@date, '%Y-%m-%d') - INTERVAL 7 DAY and dayofweek(date) = dayofweek(STR_TO_DATE(@date, '%Y-%m-%d'))" + 
+									" BETWEEN DATE_SUB(STR_TO_DATE(@date, '%Y-%m-%d') - INTERVAL 7 DAY, INTERVAL 2 WEEK) AND STR_TO_DATE(@date, '%Y-%m-%d') - INTERVAL 7 DAY and dayofweek(date) = dayofweek(STR_TO_DATE(@date, '%Y-%m-%d'))" + 
 									" GROUP BY Mailer;";
 	
 	

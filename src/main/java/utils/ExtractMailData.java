@@ -101,7 +101,7 @@ public class ExtractMailData {
 					mailObjectMap.get(mailer).setMailsSent(Double.parseDouble(mailsSent));
 					mailObjectMap.get(mailer).setOpenRate(Double.parseDouble(openRate));
 
-					String mailSentDiff = SupportLib.percentDiff(mailObjectMap.get(mailer).getMailSentBenchMark(), Double.parseDouble(mailsSent));
+					String mailSentDiff = SupportLib.percentDiff(mailObjectMap.get(mailer).getMailsSentAvg(), Double.parseDouble(mailsSent));
 					String openRateDiff = SupportLib.percentDiff(mailObjectMap.get(mailer).getOpenRateBenchMark(), Double.parseDouble(openRate));
 
 					mailObjectMap.get(mailer).setMailSentChange(mailSentDiff);

@@ -104,8 +104,8 @@
 			<th>Open Rate</th>
 			<th>Mails Sent Benchmark</th>
 			<th>Open Rate Benchmark</th>
-			<th>Prev 4 week Avg Mails Sent</th>
-			<th>Prev 4 week Avg Open Rate</th>
+			<th>Prev 2 week Avg Mails Sent</th>
+			<th>Prev 2 week Avg Open Rate</th>
 			<th>Mail Sent % Change (Based on Benchmark)</th>
 			<th>Open Rate % Change (Based on Benchmark)</th>
 		</tr>

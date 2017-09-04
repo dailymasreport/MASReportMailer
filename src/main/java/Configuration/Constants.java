@@ -5,12 +5,9 @@ public class Constants {
 	public static String userID = "dailymasreport";
 	public static String password = "times1234";
 	
-//	public static String toListMasReport = "akash.kansal@timesgroup.com;shivesh.verma@timesgroup.com;pushkar.saxena@timesgroup.com;puneet.kukreja@timesgroup.com;amit.khanna1@timesgroup.com;Tanmay.Gupta@timesgroup.com;nupur.rustgi@timesgroup.com;Ankur.Tyagi@timesgroup.com;Roushan.Singh@timesgroup.com;Ashish.Dixit@timesgroup.com;shailesh.mishra@timesgroup.com;Dinesh.Rajput@timesgroup.com;saurabh.tandon@timesgroup.com";
-//	public static String ccListMasReport = "Subodh.Kumar2@timesgroup.com";
+	public static String toListMasReport = "akash.kansal@timesgroup.com;shivesh.verma@timesgroup.com;pushkar.saxena@timesgroup.com;puneet.kukreja@timesgroup.com;amit.khanna1@timesgroup.com;Tanmay.Gupta@timesgroup.com;nupur.rustgi@timesgroup.com;Ankur.Tyagi@timesgroup.com;Roushan.Singh@timesgroup.com;Ashish.Dixit@timesgroup.com;shailesh.mishra@timesgroup.com;Dinesh.Rajput@timesgroup.com;saurabh.tandon@timesgroup.com";
+	public static String ccListMasReport = "Subodh.Kumar2@timesgroup.com";
 	
-	public static String toListMasReport = "akash.kansal@timesgroup.com;Tanmay.Gupta@timesgroup.com;Ankur.Tyagi@timesgroup.com";
-	public static String ccListMasReport = "akash.kansal@timesgroup.com";
-
 	public static String toListError = "akash.kansal@timesgroup.com";
 	public static String ccListError = "";
 	

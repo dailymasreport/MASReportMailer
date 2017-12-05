@@ -85,11 +85,13 @@
 			by ${data.openRateChange?replace("-", "")}.
 		</p>
 			[/#if]
-			[#if data.mailSentBenchMark == 0 && data.mailsSent gt 0]
+			[#if data.mailSentBenchMark == 0 && data.mailsSent gt 0 && data.mailerName!="PRS"]
 		<p class='error'>
 				[#assign count = count+1]
 				Observation ${count} - <span class='bold'>${data.mailerName}</span> mailer process seems to be running overnight.
 		</p>
+		[#else]
+				Observation ${count} - <span class='bold'>${data.mailerName}</span> under observation.
 		[/#if]
 	[/#list]
 	[#if count < 1]

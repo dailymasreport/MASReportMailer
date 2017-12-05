@@ -5,13 +5,18 @@ public class Constants {
 	public static String userID = "dailymasreport";
 	public static String password = "times1234";
 	
-	public static String toListMasReport = "akash.kansal@timesgroup.com;shivesh.verma@timesgroup.com;puneet.kukreja@timesgroup.com;amit.khanna1@timesgroup.com;Tanmay.Gupta@timesgroup.com;nupur.rustgi@timesgroup.com;Ankur.Tyagi@timesgroup.com;Roushan.Singh@timesgroup.com;Ashish.Dixit@timesgroup.com;Dinesh.Rajput@timesgroup.com;saurabh.tandon@timesgroup.com";
-	public static String ccListMasReport = "Subodh.Kumar2@timesgroup.com";
+//	public static String toListMasReport = "akash.kansal@timesgroup.com;shivesh.verma@timesgroup.com;puneet.kukreja@timesgroup.com;amit.khanna1@timesgroup.com;Tanmay.Gupta@timesgroup.com;nupur.rustgi@timesgroup.com;Ankur.Tyagi@timesgroup.com;Roushan.Singh@timesgroup.com;Ashish.Dixit@timesgroup.com;Dinesh.Rajput@timesgroup.com;saurabh.tandon@timesgroup.com";
+//	public static String ccListMasReport = "Subodh.Kumar2@timesgroup.com";
+	
+	public static String toListMasReport = "akash.kansal@timesgroup.com;Tanmay.Gupta@timesgroup.com;";
+	public static String ccListMasReport = "akash.kansal@timesgroup.com;Tanmay.Gupta@timesgroup.com;";
 	
 	public static String toListError = "akash.kansal@timesgroup.com";
 	public static String ccListError = "";
 	
-	public static String[] mobileNo = {"9810602560","9999110891","9990356888", "9910803272", "9811704908", "9716660353","9312399613", "9582486434", "8447763798"};
+//	public static String[] mobileNo = {"9810602560","9999110891","9990356888", "9910803272", "9811704908", "9716660353","9312399613", "9582486434", "8447763798"};
+	public static String[] mobileNo = {"9716660353"};
+
 	public static String errorSMSSubject = "Messages not delivered/sent for the mentioned numbers";
 	
 

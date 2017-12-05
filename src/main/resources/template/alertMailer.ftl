@@ -124,7 +124,7 @@
 		    <td	class="success">NA**</td>
 		    <td	class="success">NA**</td>
 	  	</tr>
-	  	[#elseif data.mailSentBenchMark == 0 && data.mailsSent gt 0 && data.mailerName!="PRS"]
+	  	[#elseif data.mailSentBenchMark == 0 && data.mailsSent gt 0]
 	  	[#assign isNA = 1]
 		<tr>			
 		    <td class="mailerData">${data.mailerName}</td>
@@ -134,8 +134,10 @@
 		    <td class="benchmarkColumn">NA**</td>
 		    <td	class="success">NA**</td>
 		    <td	class="success">NA**</td>
-		    <td	class="warning">Process running overnight</td>
-		    <td	class="warning">Process running overnight</td>
+		    <td	class="success">NA**</td>
+		    <td	class="success">NA**</td>
+	<#--	<td	class="warning">Process running overnight</td>   
+		    <td	class="warning">Process running overnight</td>   -->
 	  	</tr>
 	  	[#else]
 	  	<tr>

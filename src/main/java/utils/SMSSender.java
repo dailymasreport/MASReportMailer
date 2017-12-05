@@ -34,7 +34,7 @@ public class SMSSender {
 				.append(mailData.getMailSentChange().replace("-", ""));
 				
 			}
-			else if(mailData.getMailSentBenchMark() == 0 && mailData.getMailsSent() > 0 && mailData.getMailerName()!="PRS"){
+			else if(mailData.getMailSentBenchMark() == 0 && mailData.getMailsSent() > 0 && (mailData.getMailerName())!="PRS"){
 				issueCount++;
 				if(counter != 0){
 					sb.append("\n");

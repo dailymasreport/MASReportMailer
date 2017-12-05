@@ -124,7 +124,7 @@
 		    <td	class="success">NA**</td>
 		    <td	class="success">NA**</td>
 	  	</tr>
-	  	[#elseif data.mailSentBenchMark == 0 && data.mailsSent gt 0]
+	  	[#elseif data.mailSentBenchMark == 0 && data.mailsSent gt 0 && data.mailerName!="PRS"]
 	  	[#assign isNA = 1]
 		<tr>			
 		    <td class="mailerData">${data.mailerName}</td>

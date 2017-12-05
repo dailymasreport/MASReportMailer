@@ -90,8 +90,6 @@
 				[#assign count = count+1]
 				Observation ${count} - <span class='bold'>${data.mailerName}</span> mailer process seems to be running overnight.
 		</p>
-		[#else]
-				Observation ${count} - <span class='bold'>${data.mailerName}</span> under observation.
 		[/#if]
 	[/#list]
 	[#if count < 1]

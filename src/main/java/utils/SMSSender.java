@@ -34,15 +34,15 @@ public class SMSSender {
 				.append(mailData.getMailSentChange().replace("-", ""));
 				
 			}
-			else if(mailData.getMailSentBenchMark() == 0 && mailData.getMailsSent() > 0 && (mailData.getMailerName())!="PRS"){
+			else if(mailData.getMailSentBenchMark() == 0 && mailData.getMailsSent() > 0 && !mailData.getMailerName().equals("PRS")){
 				issueCount++;
 				if(counter != 0){
 					sb.append("\n");
 				}
 				sb.append(++counter)
 				.append(". ")
-				.append(mailData.getMailerName());
-//				.append(" running overnight");
+				.append(mailData.getMailerName())
+				.append(" running overnight");
 			}
 			else if(mailData.getMailSentBenchMark() < mailData.getMailsSent() && mailData.getMailSentBenchMark() != 0 && mailData.getMailsSent() != 0){
 				passCount++;

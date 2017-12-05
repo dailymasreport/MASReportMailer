@@ -41,8 +41,8 @@ public class SMSSender {
 				}
 				sb.append(++counter)
 				.append(". ")
-				.append(mailData.getMailerName())
-				.append(" running overnight");
+				.append(mailData.getMailerName());
+//				.append(" running overnight");
 			}
 			else if(mailData.getMailSentBenchMark() < mailData.getMailsSent() && mailData.getMailSentBenchMark() != 0 && mailData.getMailsSent() != 0){
 				passCount++;
